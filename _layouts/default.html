@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+{% include head.html %}
+
+<body>
+	<div id="fb-root"></div>
+	<header class="header">
+		<div class="wrap">
+			<div class="header-avatar"><a class="avatar-link" href="/" style="background-image:url(/public/img/robin.jpg)"></a></div>
+			<hgroup class="header-text">
+			  <h2 class="header-name"><a class="home-link" href="/">Robin Wouters</a></h2>
+			  <h3 class="header-title">Online Marketeer & Developer</h3>
+			</hgroup>
+			<section class="header-social">
+			  <ul class="header-social-icons">
+			    <li class="github"><a href="http://github.com/robinwo"><i class="fa icon fa-github fa-1x"></i></a>
+			    <li class="twitter"><a href="http://twitter.com/robinwo"><i class="fa icon fa-twitter fa-1x"></i></a>
+			    <li class="linkedin"><a href="http://linkedin.com/in/robinwouters"><i class="fa icon fa-linkedin fa-1x"></i></a>
+			    <li class="rss"><a href="/atom.xml"><i class="fa icon fa-rss fa-1x"></i></a>
+			  </ul>
+			  <ul class="header-social-buttons">
+			    
+			  </ul>
+			</section>
+		</div>
+	</header>
+	
+	<nav class="nav">
+	<a class="home" href="/" title="Home"><i class="fa icon fa-home fa-1x"></i></a>
+	{% if page.previous.url %} 
+	<a class="next" href="{{ page.previous.url }}" title="Previous Post: {{ page.previous.title }}">{{page.previous.title}}</a> 
+	{% endif %} 
+	{% if page.next.url %} 
+	<a class="previous" href="{{ page.next.url }}" title="Next Post: {{page.next.title}}">{{ page.next.title }}</a> 
+	{% endif %} 
+	</nav>
+	<section class="main" role="main">
+	  {{ content }}
+	</section>
+	
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	</script>
+	<script src="//platform.linkedin.com/in.js" type="text/javascript">
+		lang: en_US
+	</script>
+	<script type="text/javascript">
+		(function() {
+		var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		po.src = 'https://apis.google.com/js/platform.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+	</script>	
+
+</body>
+</html>

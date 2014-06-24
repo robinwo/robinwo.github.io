@@ -1,0 +1,14 @@
+<li>
+  <article class="article">
+    <header class="article-header">
+      <h1 class="article-title"><a class="article-link" href="{{ post.url }}">{{ post.title }}</a></h1>
+      <time class="article-date">{{ post.date | date: "%B %Y" }}</time>
+    </header>
+    <section class="post-excerpt">
+    	{{ post.excerpt }}
+    	<p>
+    		<a class="article-link read-more" href="{{ post.url }}">Read more →</a>
+    	</p>
+    </section>
+  </article>
+</li>

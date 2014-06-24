@@ -1,0 +1,22 @@
+# Dependencies
+markdown:          kramdown
+pygments:          true
+
+# Permalinks
+permalink:         /:categories/:title
+
+# Setup
+url:               http://robinwo.com
+timezone:          Europe/Amsterdam
+title:             RobinWo
+tagline:           by Robin Wouters
+description:       Site description
+url:               http://robinwo.com
+paginate:          1
+baseurl:           /
+excerpt_separator: <!--more-->
+line_numbers:      true
+author:
+  name:            Robin Wouters
+  url:             https://twitter.com/robinwo
+  email:           r@robinwo.com
